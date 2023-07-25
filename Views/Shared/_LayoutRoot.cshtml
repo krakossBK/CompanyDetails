@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Company</title>
+    <link rel="stylesheet" href="~/css/siteadmin.css" asp-append-version="true" />
+    @using CompanyDetails.Models;
+    @using CompanyDetails.AppCode;
+</head>
+<body id="bodySite">
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="border-top footer text-muted">
+        &copy; 2023 - Company - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> 
+    </footer>
+    <input id="siteUrlClear" type="hidden" value="@C.SiteUrlClear" />
+    <input id="siteUrl" type="hidden" value="@C.SiteUrl" />
+    <input id="textOk" type="hidden" value="@C.TextOk" />
+    <script src="~/js/common.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+    </script>
+</body>
+</html>
