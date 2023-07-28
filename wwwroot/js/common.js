@@ -692,6 +692,8 @@ getCompanyDetails = async function (id) {
         let result = await response.json();
         if (document.querySelector('.container') !== null)
             document.querySelector('.container').remove();
+        if (document.querySelector('.container-employees') !== null)
+            document.querySelector('.container-employees').remove();
         if (document.querySelector('.div-company-details') !== null)
             document.querySelector('.div-company-details').remove();
         var company = result.company;
@@ -751,9 +753,11 @@ getCompanyDetails = async function (id) {
                 <div class="item-right notes">Макар Макаров</div>
                 <div class="hr-end"></div>
            </div>
-        </div> `;
-        let containerDetails = document.querySelector('.container');
-        containerDetails.innerHTML += `
+        </div>
+        <div class="container-employees">
+        </div>`;
+        let containerEmployees = document.querySelector('.container-employees');
+        containerEmployees.innerHTML += `
             <div class="container-grid-details employees">
                 <div class="title-parent">Employees</div>
                 <div class="ico1 add"></div>
@@ -774,7 +778,7 @@ getCompanyDetails = async function (id) {
         catch (err) {
             console.log('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
         }
-        containerDetails.innerHTML += `</div>`;
+        containerEmployees.innerHTML += `</div>`;
     } else
         console.log("Ошибка HTTP: " + response.status);
 }
@@ -792,8 +796,8 @@ getEmployee = async function (id) {
             if (document.querySelector('.container-grid-details.employee') !== null)
                 document.querySelector('.container-grid-details.employee').remove();
 
-            let containerDetails = document.querySelector('.container');
-            containerDetails.innerHTML += `
+            let containerEmployees = document.querySelector('.container-employees');
+            containerEmployees.innerHTML += `
             <div class="container-grid-details employee">            
                 <div class="title-parent">Employee</div>
                 <div class="ico2 edit"></div>

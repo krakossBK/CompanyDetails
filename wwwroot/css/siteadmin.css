@@ -7,7 +7,7 @@ html { font-family: "Poppins", sans-serif; font-size: 14px; position: relative; 
 
 body { /*border: 1px solid red;*/ margin-bottom: 60px; font-family: "Poppins", sans-serif; --black: #242424; --white: #f5f5f5; --pill: #e0d4be; --red: #cc033f; }
 header { width: 100%; min-height: 100vh; overflow-x: hidden; }
-footer { padding: 6px 20px; /* border: 1px solid #ecfe01;*/ position: absolute; bottom: 0px; width: 98%; margin-left: 1%; }
+footer { padding: 6px 1%; position: absolute; bottom: 0px; width: 94%; margin-left: 1%; }
 ul { list-style: none; }
 .page-wrap { position: relative; }
 
@@ -129,16 +129,14 @@ article { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-inde
     .container-grid .item.companyName { cursor: pointer; }
 
 /* details */
-.container { display: grid; grid-template-columns: repeat(3, 1fr); }
+.container { display: grid; grid-template-columns: repeat(5, 1fr); }
 .div-company-details { margin: 26px 16px; }
     .div-company-details .title-companies-details { margin-right: 26px; font-weight: 700; }
 
-.container-grid-details { margin-bottom: 30px; border-top: 1px solid #e4dcdc; border-bottom: 1px solid #e4dcdc; display: grid; grid-template-columns: repeat(5, 1fr) repeat(3, 0.5fr); grid-column-gap: 0px; grid-row-gap: 0px; margin: 0 auto; }
+.container-grid-details { border-top: 1px solid #e4dcdc; border-bottom: 1px solid #e4dcdc; display: grid; grid-template-columns: repeat(5, 1fr) repeat(3, 0.5fr); grid-column-gap: 0px; grid-row-gap: 0px; margin: 0px auto 30px auto; }
 
     .container-grid-details:first-child .hr-end { border: 1px solid transparent; }
-
-    .container-grid-details.employees { margin-top: 20px; }
-    .container-grid-details.employee { border-left: 0px; border-right: 0px; border-bottom: 0px; margin-top: 20px; }
+    .container-grid-details.employee { border-left: 0px; border-right: 0px; border-bottom: 0px; }
 
     .container-grid-details .title-parent { grid-column: col 1 / span 5; font-weight: 700; padding: 9px 10px 4px; min-height: 30px; height: 30px; }
     .container-grid-details.employee .title-parent { color: #fff; }
@@ -146,7 +144,7 @@ article { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-inde
     .container-grid-details .ico2 { grid-column: col 7 / span 1 }
     .container-grid-details .ico3 { grid-column: col 8 / span 1 }
     .container-grid-details .galka { cursor: pointer; background-image: url('../ico/galkasvgpng_ru.svg'); background-size: 21px 21px; background-position: 50% 50%; background-repeat: no-repeat; width: 26px; padding-top: 10px; }
-    .container-grid-details .add { cursor: pointer; background-image: url('../ico/addsvgpng_ru.svg'); background-size: 36px 48px; background-position: 50% 50%; background-repeat: no-repeat;  width: 26px; padding-top: 10px; }
+    .container-grid-details .add { cursor: pointer; background-image: url('../ico/addsvgpng_ru.svg'); background-size: 36px 48px; background-position: 50% 50%; background-repeat: no-repeat; width: 26px; padding-top: 10px; }
     .container-grid-details .delete { cursor: pointer; background-image: url('../ico/deletesvgpng_ru.svg'); background-size: 21px 21px; background-position: 50% 50%; background-repeat: no-repeat; width: 26px; padding-top: 10px; }
     .container-grid-details .refresh { cursor: pointer; background-image: url('../ico/refreshsvgpng_ru.svg'); background-size: 21px 21px; background-position: 50% 50%; background-repeat: no-repeat; width: 26px; padding-top: 10px; }
     .container-grid-details .edit { cursor: pointer; background-image: url('../ico/editshsvgpng_ru.png'); background-size: 18px 18px; background-position: 50% 50%; background-repeat: no-repeat; width: 26px; padding-top: 10px; }
@@ -174,3 +172,7 @@ article { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-inde
 
     .container-grid-details .item-left-employee { grid-column: col 1 / span 3; cursor: pointer; padding: 6px 0px 0px 6px; font-size: 12px; margin-right: 20px; }
     .container-grid-details .item-right-employee { grid-column: col 4 / span 5; cursor: pointer; padding: 6px 8px 0px 6px; border: 1px solid #e4dcdc; font-size: 12px; margin-bottom: 12px; }
+
+/* container   for employees  */
+.container-employees { display: grid; grid-template-columns: repeat(2, 0.3fr) 1fr; grid-column-gap: 0px; grid-row-gap: 0px; border-top: 1px solid #e4dcdc; }
+    .container-employees .container-grid-details { border-top: 0px; }
